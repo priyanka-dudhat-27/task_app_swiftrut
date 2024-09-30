@@ -15,7 +15,7 @@ const app = express();
 const server = http.createServer(app);
 
 dbConnect();
-cronJobs();
+// cronJobs();
 initSocket(server);
 
 app.use(express.json());

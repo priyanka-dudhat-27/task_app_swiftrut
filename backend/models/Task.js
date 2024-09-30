@@ -26,8 +26,12 @@ const Task = mongoose.Schema({
         type: Boolean,
         default: false , // True if assigned by admin, false if by user
         required : false
+    },
+    Priority: {
+        type: String,
+        enum: ['Low', 'Medium', 'High'],
+        default: 'Medium'
     }
-
 },{timestamps: true});
 const TaskModel = mongoose.model("Task", Task);
 module.exports = TaskModel;
